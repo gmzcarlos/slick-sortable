@@ -1,0 +1,8 @@
+GET        /                     controllers.Application.index
+PUT        /position             controllers.Application.reposition
+
+GET        /assets/*file         controllers.Assets.at(path="/public", file)
+GET        /webjars/*file        controllers.WebJarAssets.at(file)
+
+GET        /jobqueue             controllers.Application.jobqueuePage
+GET        /log                  controllers.Application.logPage

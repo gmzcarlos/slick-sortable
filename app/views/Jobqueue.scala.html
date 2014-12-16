@@ -1,0 +1,27 @@
+@(jobs: List[Job])
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+<link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+<link rel='stylesheet' href='@routes.Assets.at("stylesheets/main.css")'>
+
+</head>
+<body>
+<div class="container">
+
+    <h1>Jobqueue</h1>
+
+    <ul id="sortable" class="list-group">
+    @for(job <- jobs) {
+        <li class="list-group-item">
+            <span class="badge">@job.description</span>
+            @job.name
+        </li>
+    }
+    </ul>
+
+</div>
+</body>
+</html>
